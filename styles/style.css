@@ -99,14 +99,13 @@ ol {
 
 .search-form__pseudo-checkbox::before {
   content: '';
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  margin: 1px;
   width: 15px;
   height: 15px;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
   transition: .2s;
 }
@@ -137,8 +136,8 @@ ol {
   background-color: transparent;
   appearance: none;
   border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
 }
 
 .search-form__label {
@@ -158,7 +157,7 @@ ol {
 
 
 .button:hover,
-.content__list-item:hover,
+.content__card-link:hover,
 .search-form__label:hover {
   text-decoration:1px underline #fff;
 }
@@ -210,6 +209,10 @@ ol {
 
 .content__list-item {
   padding-bottom: 30px;
+}
+
+.content__list-item:last-child {
+  padding: 0;
 }
 
 .content__video-card{
